@@ -62,3 +62,19 @@ yarn run start:prod
 - MongoDB
 - NEST
 ```
+
+# Production build
+
+1. Crear el archivo `.env.prod`
+2. Llenar las variables de entorno de producción.
+3. Crear la nueva imagen:
+
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env-prod up -- build -d
+```
+
+4. Levantar imagen si ya esta creada:
+
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up -d
+```
